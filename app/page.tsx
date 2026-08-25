@@ -1,9 +1,8 @@
-import { Hero } from "@/sections";
+import { Hero, About } from "@/sections";
 import { Section, Container } from "@/components/layout";
 import { SECTION_IDS } from "@/constants/routes";
 
 const DOWNSTREAM_SECTIONS = [
-  { id: SECTION_IDS.ABOUT, label: "About & Journey" },
   { id: SECTION_IDS.EVENTS, label: "Events & Experience" },
   { id: SECTION_IDS.GALLERY, label: "Gallery & Moments" },
   { id: SECTION_IDS.REELS, label: "Reels & Showreel" },
@@ -15,6 +14,9 @@ export default function Home() {
     <main className="flex flex-col min-h-screen">
       {/* Phase 4: Production Hero Section */}
       <Hero />
+
+      {/* Phase 5: Production About Section */}
+      <About />
 
       {/* Downstream Section Targets for Navigation & Scroll-Spy */}
       {DOWNSTREAM_SECTIONS.map((section, index) => (
