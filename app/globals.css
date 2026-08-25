@@ -46,9 +46,29 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+  --spacing-section-sm: clamp(2rem, 4vw, 3rem);
+  --spacing-section-md: clamp(3.5rem, 6vw, 5rem);
+  --spacing-section-lg: clamp(5rem, 10vw, 8rem);
+  --spacing-section-xl: clamp(6.5rem, 12vw, 10rem);
+  --color-maroon: var(--maroon);
+  --color-maroon-dark: var(--maroon-dark);
+  --color-maroon-light: var(--maroon-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-warm-gray: var(--warm-gray);
+  --color-warm-surface: var(--warm-surface);
 }
 
 :root {
+  --maroon: #581123;
+  --maroon-dark: #3F0B18;
+  --maroon-light: #731A32;
+  --gold: #C5A059;
+  --gold-light: #DFB76C;
+  --gold-dark: #A8823B;
+  --warm-gray: #F7F6F2;
+  --warm-surface: #EFECE6;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -126,5 +146,12 @@
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }
